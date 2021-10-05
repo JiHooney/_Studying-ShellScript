@@ -1,0 +1,28 @@
+# 배열 사용
+* 기본 사용
+```
+> array=(111 "foo" 222 "bar" 333 "foobar")
+> echo $array
+# 111
+
+> echo ${array[@]}
+# 111 foo 222 bar 333 foobar
+```
+
+* 단일요소를 기존 배열에 추가하기
+```
+> array=("hoge" "fuga" "foo" "bar")
+> echo "${array[0]} ${array[1]} ${array[2]} ${array[3]}"
+
+> array+=("end")
+> echo "${array[0]} ${array[1]} ${array[2]} ${array[3]} ${array[4]}"
+
+
+* 변수를 저장할 수 있다.
+> a=abc
+> b=qqq
+> c=www
+> d=rrr
+> origanizations=($a $b $c $d)
+> echo "${origanizations[0]} ${origanizations[1]} ${origanizations[2]} ${origanizations[3]}"
+```
